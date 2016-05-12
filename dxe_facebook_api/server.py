@@ -14,7 +14,7 @@ def example_request():
     return render_template('example_request.html')
 
 
-@app.route('/facebook/attending_event')
+@app.route('/attending_event')
 def attending_event():
     """
     Get the number of people who have replied 'attending' or 'maybe'

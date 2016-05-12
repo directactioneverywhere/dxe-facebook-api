@@ -1,18 +1,24 @@
-Facebook Data API
-=================
-**NOTE:** This is currently not being used anywhere (12/13/15).
+Facebook API
+============
+This is an app to retrieve DxE Facebook data.
 
-This endpoint basically just hits the [Facebook Graph API](https://developers.facebook.com/docs/graph-api) and returns the results.
+As of 12/13/15, this is not being used by anything.
 
 How to use it
 -------------
 Example request:
 
-    GET http://dxetech.org/facebook/attending_event?event_id=1697430973810357
+    GET http://facebook-api.dxetech.org/attending_event?event_id=1697430973810357
 
 See [example_request.html](example_request.html) for an example in JavaScript without JQuery.
 
 See [server.py](dxe_facebook_api/facebook.py) for the full functionality.
+
+Deployment
+----------
+This app is deployed with Dokku. [Learn about](https://github.com/directactioneverywhere/dxe-learn2dokku) how DxE Tech deploys with Dokku. The Dokku git remote is:
+
+    dokku@dxetech.org:facebook-api
 
 Why this is a thing
 -------------------
@@ -35,7 +41,6 @@ Don't let anyone get this access key. Assign it to the environment variable `FAC
 
     dokku config:set facebook-data-api "FACEBOOK_APP_ACCESS_TOKEN=<token>"
 
-Deployment URL to come.
 
 Finally, go through their [App Security Checkup](https://developers.facebook.com/tools/app-security-checkup/) and make everything as unpermissive as possible and convenient while things still work.
 

@@ -1,1 +1,1 @@
-web: gunicorn dxe_facebook_data_api.server:app
+web: gunicorn dxe_facebook_api.server:app
